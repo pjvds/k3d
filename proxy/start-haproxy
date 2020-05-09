@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Run confd
+confd -onetime -backend env
+
+# Start haproxy (daemon disabled)
+haproxy -db -f /usr/local/etc/haproxy/haproxy.cfg
